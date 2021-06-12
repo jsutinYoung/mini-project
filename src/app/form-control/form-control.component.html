@@ -1,0 +1,89 @@
+<div class="container">
+
+    <mat-card class="card">
+        <mat-slide-toggle #toggle1 class="toggle">Show Password Details</mat-slide-toggle>
+        
+        <mat-form-field
+        appearance="outline"
+        [color]="passwordComponentWithValidation.color"
+        style="width: 100%"
+        >
+        <mat-label>Password</mat-label>
+        <mat-pass-toggle-visibility #toggle matSuffix></mat-pass-toggle-visibility>
+        <input
+        matInput
+        #passwordWithValidation
+        [type]="toggle.type"
+        required
+        [formControl]="passwordComponentWithValidation.passwordFormControl"
+        placeholder="Password"
+        />
+        
+        <!--password hint-->
+        <mat-hint alignment="end" aria-live="polite">
+            {{ passwordWithValidation.value.length }} /
+            {{ passwordComponentWithValidation.max }}
+        </mat-hint>
+        <!--password error msgs-->
+        <mat-error
+        *ngIf="
+        passwordComponentWithValidation.passwordFormControl.hasError('required')
+        "
+        >
+        Password is required
+    </mat-error>
+    <mat-error
+    *ngIf="
+    passwordComponentWithValidation.passwordFormControl.hasError('pattern')
+    "
+    >
+    Password is not valid
+</mat-error>
+</mat-form-field>
+
+<!--@angular-material-extensions/password-strength's main component-->
+<mat-password-strength
+#passwordComponentWithValidation
+(onStrengthChanged)="onStrengthChanged($event)"
+[password]="passwordWithValidation.value"
+>
+</mat-password-strength>
+<br><br>
+
+<div class="strengthBar">
+<div class="passwordStrength">
+    <span class="weak1"></span>
+    <span class="weak2"></span>
+    <span class="weak3"></span>
+    <span class="weak4">Too weak</span>
+</div>
+
+<div class="passwordStrength">
+    <span class="stronger1"></span>
+    <span class="stronger2"></span>
+    <span class="stronger3"></span>
+    <span class="stronger4">Could be stronger</span>
+</div>
+
+
+<div class="passwordStrength">
+    <span class="strong1"></span>
+    <span class="strong2"></span>
+    <span class="strong3"></span>
+    <span class="strong4">Strong password</span>
+</div>
+
+</div>
+
+
+
+
+<!--Password's strength info-->
+<mat-password-strength-info
+*ngIf="toggle1.checked"
+[passwordComponent]="passwordComponentWithValidation"
+>
+</mat-password-strength-info>
+</mat-card>
+
+</div>

@@ -1,0 +1,103 @@
+.card{
+    padding: 100px;
+    margin: 20px;
+    width: 50%;
+}
+
+.container{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle {
+    padding: 20px;
+}
+
+/* .passwordStrength {
+    display: flex;
+    
+} */
+
+
+.weak1 {
+    display: inline-block;
+    width: 130px;
+    height: 7px;
+    border-radius: 5px;
+    background: red;
+    margin-right: 2px
+}
+
+.weak2 {
+    display: inline-block;
+    width: 130px;
+    height: 7px;
+    border-radius: 5px;
+    background: grey;
+    margin-right: 2px;
+}
+
+.weak3 {
+    display: inline-block;
+    width: 130px;
+    height: 7px;
+    border-radius: 5px;
+    background: grey;
+    margin-right: 10px;
+}
+
+.stronger1 {
+    display: inline-block;
+    width: 130px;
+    height: 7px;
+    border-radius: 5px;
+    background: red;
+    margin-right: 2px;}
+
+.stronger2 {
+    display: inline-block;
+    width: 130px;
+    height: 7px;
+    border-radius: 5px;
+    background: orange;
+    margin-right: 2px;
+}
+
+.stronger3 {
+    display: inline-block;
+    width: 130px;
+    height: 7px;
+    border-radius: 5px;
+    background: grey;
+    margin-right: 10px;
+}
+
+.strong1 {
+    display: inline-block;
+    width: 130px;
+    height: 7px;
+    border-radius: 5px;
+    background: red;
+    margin-right: 2px
+}
+
+.strong2 {
+    display: inline-block;
+    width: 130px;
+    height: 7px;
+    border-radius: 5px;
+    background: orange;
+    margin-right: 2px;
+}
+
+.strong3 {
+    display: inline-block;
+    width: 130px;
+    height: 7px;
+    border-radius: 5px;
+    background: green;
+    margin-right: 10px;
+}
+
