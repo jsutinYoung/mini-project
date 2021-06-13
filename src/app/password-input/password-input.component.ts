@@ -19,7 +19,7 @@ export class PasswordInputComponent {
   password = new FormControl('', [
     Validators.required,
     Validators.minLength(8),
-    Validators.pattern(/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&]).{8,}$/),
+    Validators.pattern(/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&!]).{8,}$/),
   ]);
 
   //store password strength

@@ -1,27 +1,35 @@
 # MiniProject
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.8.
+A) Author :  Justin Young
 
-## Development server
+B) Sources: https://github.com/jsutinYoung/mini-project
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+C) Stackblitz editor: 
 
-## Code scaffolding
+D) Stackblitz demo:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+E) Specification: UI features and description:
+    1. Password input form:
+        1. The visibility icon allows users to hide or show the password.
+        2. The input box allows users to input password with validation control and error massages.
+    2. Validity — Validator : 
+        1. Form control validator sets a minimal length limit of 8 characters
+        2. The validator can parse in special characters  : @#$%&!
+        3. It also detects if there is at least one uppercase letter one lowercase letter and one number.
+        4. Error messages will display if the input is invalid.
+    3. Strength bar: 
+        1. The strength bar indicates the complexity of the password base on the length of the password alone. i)  TOO WEAK : 1-8 characters ii) CAN BE STRONGER : 9 - 12 characters iii) STRONG(EST) :  > 12 
+    4. Responsive display: UI can fit different screen size. It is also responsive to different size of browser display.
+        
+        
+F). Development tools: 
+    1. Angular framework ver 11
+    2. Angular Material design
+    3. CSS
+    4. HTML
+    5. Typescript
+    6.  Github
+    7. StackBlitz
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
